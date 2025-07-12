@@ -1,3 +1,5 @@
+"""ViewSet для API задач."""
+
 from rest_framework import status, viewsets
 from rest_framework.response import Response
 
@@ -10,6 +12,7 @@ class TaskView(viewsets.ModelViewSet):
 
     Позволяет создавать, просматривать, обновлять и удалять задачи.
     """
+
     serializer_class = TaskSerializer
     queryset = Task.objects.all()
 
